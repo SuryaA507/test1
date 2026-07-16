@@ -6,12 +6,11 @@ import StudentDirectory from './components/StudentDirectory';
 import ComparisonView from './components/ComparisonView';
 import AnalyticsView from './components/AnalyticsView';
 import type { Student } from './data/students';
-import { useIsMobile } from './hooks/useIsMobile';
 
 function App() {
   const [activeTab, setActiveTab] = useState('chat'); // 'chat', 'directory', 'compare', 'analytics'
   const [selectedStudent, setSelectedStudent] = useState<Student | null>(null);
-  const isMobile = useIsMobile();
+
 
   const handleSelectStudent = (student: Student) => {
     setSelectedStudent(student);
